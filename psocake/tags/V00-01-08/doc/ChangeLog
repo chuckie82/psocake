@@ -1,0 +1,73 @@
+#--------------------------------------------------------------------------
+# File and Version Information:
+#  $Id$
+#
+# Description:
+#  ChangeLog file for package psocake
+#------------------------------------------------------------------------
+
+Package author: Chunhong "Chuck" Yoon
+
+Please describe any modifications that you made to the package in the
+reverse time order.
+
+Tag: V00-01-08
+2016-04-25 Chunhong Yoon
+- Added psana-style experiment:run string
+
+Tag: V00-01-07
+2016-04-18 Chunhong Yoon
+- Tabbed dock areas
+- Add chi squared hit finder
+
+Tag: V00-01-06
+2016-04-18 Chunhong Yoon
+- Added peak finder algorithm 4 to findPeaks app
+- Fix rectangular mask out of range problem
+- Add 99 percentile display range
+
+Tag: V00-01-05
+2016-04-15 Christopher O'Grady
+- Move generatePowder.py to app/generatePowder and fix a bug where
+  the gain multiplication was done before checking that detector
+  array was not None.
+
+Tag: V00-01-04
+2016-04-12 Chunhong Yoon
+- Added peak finder algorithm 4
+
+Tag: V00-01-03
+2016-04-12 Chunhong Yoon
+- Run findPeaks using app
+
+Tag: V00-01-02
+2016-04-08 Christopher O'Grady
+- First pass from Chuck at mask generation.  Probably other changes
+  I'm not aware of.  Also a bug fix for handling peak-finding for
+  detectors that have a natural 2D shape (like Epix).
+
+Tag: V00-01-01
+2016-01-28 Christopher O'Grady
+- Change dettype call to use changed PyDetector interface
+
+Tag: V00-01-00
+2016-01-28 Chunhong Yoon
+- Outputs cxidb file compatible with CrystFEL
+- Quantifier panel for jumping to events based on metric
+
+Tag: V00-00-03
+2016-01-24 Chunhong Yoon
+- Displays coords x and y
+
+Tag: V00-00-02
+2015-11-18 Chunhong Yoon
+- Works with the new detector interface, dettype
+
+Tag: V00-00-01
+2015-11-18 Chunhong Yoon
+- just created this template file, this entry is an example of the change log
+  entry
+- keep it brief and easy to read
+- always include author name and date of the change, provide CVS tag when 
+  appropriate
+
