@@ -1,0 +1,218 @@
+#--------------------------------------------------------------------------
+# File and Version Information:
+#  $Id$
+#
+# Description:
+#  ChangeLog file for package psocake
+#------------------------------------------------------------------------
+
+Package author: Chunhong "Chuck" Yoon
+
+Please describe any modifications that you made to the package in the
+reverse time order.
+
+Tag: V00-01-42
+2016-08-18 Chunhong Yoon
+- Remove plot of polygon mask
+
+Tag: V00-01-41
+2016-08-18 Chunhong Yoon
+- Fix clenEpics name generated from source
+
+Tag: V00-01-40
+2016-08-14 Chunhong Yoon
+- Remove hardlink for psgeom
+- Fix polygon mask in toggle mode
+
+Tag: V00-01-39
+2016-08-13 Chunhong Yoon
+- Fix detector distance update
+- Auto update small data name
+- Peak finding batch job with median or radial background subtraction
+
+Tag: V00-01-38
+2016-08-13 Chunhong Yoon
+- allow interactive median and radial background subtraction
+
+Tag: V00-01-37
+2016-08-05 Chunhong Yoon
+- fix divide by zero when photon energy is zero
+- change hit finder
+
+Tag: V00-01-36
+2016-08-01 Chunhong Yoon
+- fix hitfinder bug with mask names
+
+Tag: V00-01-35
+2016-08-01 Chunhong Yoon
+- fix bugs during refactoring
+
+Tag: V00-01-34
+2016-07-31 Chunhong Yoon
+- refactor all panels
+
+Tag: V00-01-33
+2016-07-29 Chunhong Yoon
+- added image panel
+
+Tag: V00-01-32
+2016-07-29 Chunhong Yoon
+- added user feedback
+
+Tag: V00-01-31
+2016-07-26 Chunhong Yoon
+- Majore refactoring of code
+
+Tag: V00-01-30
+2016-07-22 Chunhong Yoon
+- Deploy geometry based on cirlce ROI
+
+Tag: V00-01-29
+2016-07-22 Chunhong Yoon
+- Launcher for all threads
+
+Tag: V00-01-28
+2016-07-22 Chunhong Yoon
+- Init logger
+
+Tag: V00-01-27
+2016-07-22 Chunhong Yoon
+- Fix common mode correction
+
+Tag: V00-01-26
+2016-07-18 Chunhong Yoon
+- changed nm to angstrom for unitcell display
+- added detector centre indicator
+
+Tag: V00-01-25
+2016-07-14 Chunhong Yoon
+- Added label panel
+- Decouple elog with gui
+
+Tag: V00-01-24
+2016-07-05 Chunhong Yoon
+- Masking for 2D detectors
+
+Tag: V00-01-23
+2016-06-29 Chunhong Yoon
+- fix LitPixels
+
+Tag: V00-01-22
+2016-06-29 Chunhong Yoon
+- Peak finding on Opal
+
+Tag: V00-01-21
+2016-06-29 Chunhong Yoon
+- Handle area detectors with 2D shape
+- Auto level for various image properties
+
+Tag: V00-01-20
+2016-06-17 Chunhong Yoon
+- Added hybrid gain for cspad types
+
+Tag: V00-01-19
+2016-06-15 Chunhong Yoon
+- Bug fix: use clen only at CXI
+
+Tag: V00-01-18
+2016-06-06 Chunhong Yoon
+- Demo version
+
+Tag: V00-01-17
+2016-05-23 Chunhong Yoon
+- Allow detector distance scan
+- Triple integration ring
+
+Tag: V00-01-16
+2016-05-23 Chunhong Yoon
+- Add indexing result display
+
+Tag: V00-01-15
+2016-05-22 Chunhong Yoon
+- Add CrystFEL indexing panel
+
+Tag: V00-01-14
+2016-05-18 Chunhong Yoon
+- Fix 2048 peak finder limit
+
+Tag: V00-01-13
+2016-05-13 Chunhong Yoon
+- Removed peak finder v2
+
+Tag: V00-01-12
+2016-05-12 Christopher O'Grady
+- For cspad2x2 user masks, save both DAQ/natural shape arrays in npy files
+
+Tag: V00-01-11
+2016-05-08 Chunhong Yoon
+- Add back generatePowder
+
+Tag: V00-01-10
+2016-05-08 Chunhong Yoon
+- Fix pedestal display
+- Add common mode display
+
+Tag: V00-01-09
+2016-05-02 Chunhong Yoon
+- Better detector information display
+
+Tag: V00-01-08
+2016-04-25 Chunhong Yoon
+- Added psana-style experiment:run string
+
+Tag: V00-01-07
+2016-04-18 Chunhong Yoon
+- Tabbed dock areas
+- Add chi squared hit finder
+
+Tag: V00-01-06
+2016-04-18 Chunhong Yoon
+- Added peak finder algorithm 4 to findPeaks app
+- Fix rectangular mask out of range problem
+- Add 99 percentile display range
+
+Tag: V00-01-05
+2016-04-15 Christopher O'Grady
+- Move generatePowder.py to app/generatePowder and fix a bug where
+  the gain multiplication was done before checking that detector
+  array was not None.
+
+Tag: V00-01-04
+2016-04-12 Chunhong Yoon
+- Added peak finder algorithm 4
+
+Tag: V00-01-03
+2016-04-12 Chunhong Yoon
+- Run findPeaks using app
+
+Tag: V00-01-02
+2016-04-08 Christopher O'Grady
+- First pass from Chuck at mask generation.  Probably other changes
+  I'm not aware of.  Also a bug fix for handling peak-finding for
+  detectors that have a natural 2D shape (like Epix).
+
+Tag: V00-01-01
+2016-01-28 Christopher O'Grady
+- Change dettype call to use changed PyDetector interface
+
+Tag: V00-01-00
+2016-01-28 Chunhong Yoon
+- Outputs cxidb file compatible with CrystFEL
+- Quantifier panel for jumping to events based on metric
+
+Tag: V00-00-03
+2016-01-24 Chunhong Yoon
+- Displays coords x and y
+
+Tag: V00-00-02
+2015-11-18 Chunhong Yoon
+- Works with the new detector interface, dettype
+
+Tag: V00-00-01
+2015-11-18 Chunhong Yoon
+- just created this template file, this entry is an example of the change log
+  entry
+- keep it brief and easy to read
+- always include author name and date of the change, provide CVS tag when 
+  appropriate
+
