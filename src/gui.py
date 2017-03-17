@@ -16,12 +16,16 @@ import pyqtgraph.console
 from pyqtgraph.dockarea import *
 from pyqtgraph.dockarea.Dock import DockLabel
 from pyqtgraph.parametertree import Parameter, ParameterTree#, ParameterItem, registerParameterType
-import psana
 import h5py
 import argparse
 import time
 import subprocess
-import os.path
+import os
+
+if 'lcls' in os.environ['PSOCAKE_FACILITY']:
+    import psana
+elif 'pal' in os.environ['PSOCAKE_FACILITY']:
+    pass
 
 # Panel modules
 import diffractionGeometryPanel, crystalIndexingPanel, SmallDataPanel, ExperimentPanel
@@ -42,7 +46,9 @@ parser.add_argument("-v", help="verbosity level, default=0",default=0, type=int)
 parser.add_argument('--version', action='version',
                     version='%(prog)s {version}'.format(version=__version__))
 parser.add_argument("-m","--mode", help="Mode sets the combination of panels available on the GUI, options: {lite,sfx,spi,all}",default="lite", type=str)
+parser.add_argument("-f","--facility", help="Select facility name, options: {lcls,pal}",default="lcls", type=str)
 args = parser.parse_args()
+
 
 class Window(QtGui.QMainWindow):
     global ex
