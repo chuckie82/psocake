@@ -15,7 +15,6 @@ def main():
 
     run_num_list=['182','183','184','185','186','188','190','191','192','193','194','196','197']
 
-    #outdir = "/reg/d/psdm/cxi/cxitut13/res/marcgri/single_hits/data/"
 
     for fileInd in range(len(run_num_list)):
 
@@ -24,7 +23,6 @@ def main():
         # Open files and get data
         run_num=run_num_list[fileInd]
 
-        #   f=h5py.File('/reg/d/psdm/amo/amo86615/res/yoon82/data/amo86615_'+run_num+'_PR772_single.h5')
         f = h5py.File(exp_data_path + '_' + run_num + '_PR772_single.h5')
         ts = f['/photonConverter/eventTime'].value
         print(ts)
