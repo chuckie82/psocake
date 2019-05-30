@@ -11,10 +11,11 @@ def main():
     exp_data_path = params['idir']
     outdir = params['odir']
 
-
-
+    # specific experimental parameters, change as necessary
+    det_name = 'pnccdBack'
     run_num_list=['182','183','184','185','186','188','190','191','192','193','194','196','197']
-
+    exp_name = 'amo86615'
+    h5file_suffix = '_PR772_single'
 
     for fileInd in range(len(run_num_list)):
 
@@ -23,15 +24,15 @@ def main():
         # Open files and get data
         run_num=run_num_list[fileInd]
 
-        f = h5py.File(exp_data_path + '_' + run_num + '_PR772_single.h5')
+        f = h5py.File(exp_data_path + '_' + run_num + h5file_suffix + '.h5')
         ts = f['/photonConverter/eventTime'].value
         print(ts)
         fid = f['/photonConverter/fiducials'].value
-        ds = psana.DataSource('exp=amo86615:run='+run_num+':idx')
+        ds = psana.DataSource('exp=' + exp_name + ':run='+run_num+':idx')
         run = ds.runs().next()    
         times = run.times()
         env = ds.env()
-        det = psana.Detector('pnccdBack', env)
+        det = psana.Detector(det_name, env)
         et = psana.EventTime(int(ts[0]),fid[0])
         evt = run.event(et)
         example = det.image(evt)
