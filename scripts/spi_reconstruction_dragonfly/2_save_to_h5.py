@@ -5,13 +5,16 @@ import os,sys
 
 def main():
     
+    # experimental file and run information, modify as necessary
+    h5filename = 'single_hits.h5'
+    run_num_list=['182','183','184','185','186','188','190','191','192','193','194','196','197']
+
+    # command line parameter
     params = get_input_arguments(sys.argv)
     path = params['path']
 
-    run_num_list=['182','183','184','185','186','188','190','191','192','193','194','196','197']
-    #path = "/reg/d/psdm/cxi/cxitut13/res/marcgri/single_hits/data/"
 
-    with h5.File(path + "/single_hits.h5",'w') as h5file:
+    with h5.File(path + '/' + h5filename,'w') as h5file:
        for l in range(len(run_num_list)):
         
            # load_photons
@@ -39,6 +42,6 @@ def parse_input_arguments(args):
 
     del args[0]
     parser = argparse.ArgumentParser()
-    parser.add_argument('-p','--path',type=str,default=os.getcwd(), help='path to single hits data arrays')
+    parser.add_argument('-p','--path',type=str,default=os.getcwd(), help='path to numpy data arrays')
     
     return vars(parser.parse_args(args))
