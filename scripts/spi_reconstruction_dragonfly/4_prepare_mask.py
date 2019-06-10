@@ -6,6 +6,9 @@ import os,sys
 import skimage.measure as skm
 import argparse
 
+# This script does not work and is not compatible with Dragonfly.
+# Mask convention used by Dragonfly is 0 for X, 1 for Y, 2 for Z.
+
 def main():
     
     params = parse_input_arguments(sys.argv)
