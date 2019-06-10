@@ -7,7 +7,11 @@ import skimage.measure as skm
 import argparse
 
 # This script does not work and is not compatible with Dragonfly.
-# Mask convention used by Dragonfly is 0 for X, 1 for Y, 2 for Z.
+
+# Mask convention used by Dragonfly is 0,1, or 2
+# 0 - good pixels,  used for orientations and update of intensity model
+# 1 - pixels not used for orientations but merged into 3D grid
+# 2 - bad pixels, which are either dead pixels or pixels within beamstop
 
 def main():
     
